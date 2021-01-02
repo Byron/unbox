@@ -1,6 +1,6 @@
 [package]
 name = "unpack"
-version = "0.2.2"
+version = "0.2.3"
 authors = ["Armin Ronacher <armin.ronacher@active-4.com>", "Sebastian Thiel <sebastian.thiel@icloud.com>"]
 edition = "2018"
 license = "MIT"
