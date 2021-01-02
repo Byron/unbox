@@ -41,7 +41,7 @@ impl Archive for ZipArchive {
     fn unpack(&mut self, helper: &mut UnpackHelper) -> Result<(), Error> {
         for idx in 0..self.rdr.len() {
             let file = self.rdr.by_index(idx)?;
-            let name = file.sanitized_name();
+            let name = file.mangled_name();
             if file.unix_mode().unwrap_or(0) & 16384 == 0 && !file.name().ends_with('/') {
                 helper.write_file_with_progress(name, file)?;
             } else {
