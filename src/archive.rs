@@ -4,7 +4,7 @@ use std::io::{self, BufReader, Read, Write};
 use std::path::{Path, PathBuf};
 
 use failure::Error;
-use indicatif::{ProgressBar, ProgressBarRead, ProgressStyle};
+use indicatif::{ProgressBar, ProgressBarWrap, ProgressStyle};
 use uuid::Uuid;
 
 use crate::utils::{rename_resolving_conflict, TempDirectory};
@@ -103,7 +103,7 @@ impl UnpackHelper {
     }
 
     /// Wraps a stream with the progress bar reader.
-    pub fn wrap_read<R: Read>(&self, read: R) -> ProgressBarRead<R> {
+    pub fn wrap_read<R: Read>(&self, read: R) -> ProgressBarWrap<R> {
         self.pb.wrap_read(read)
     }
 
