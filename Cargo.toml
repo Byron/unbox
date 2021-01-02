@@ -9,6 +9,7 @@ readme = "README.md"
 repository = "https://github.com/Byron/unpack"
 homepage = "https://github.com/Byron/unpack"
 documentation = "https://github.com/Byron/unpack"
+include = ["src/**/*", "README.md"]
 
 [dependencies]
 clap = "2.32.0"
